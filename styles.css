@@ -1,0 +1,253 @@
+/* Cantina Zafferano — carvão e âmbar. O cardápio é a peça central. */
+
+:root {
+  --carvao:     #14100E;
+  --carvao-alt: #1D1815;
+  --ambar:      #E0A458;
+  --ambar-forte:#EFBB74;
+  --creme:      #F2E9DE;
+  --creme-suave: rgba(242, 233, 222, .72);
+  --creme-fraco: rgba(242, 233, 222, .42);
+
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --corpo:   "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  --medida: 66ch;
+
+  --e1: .5rem; --e2: 1rem;  --e3: 1.75rem;
+  --e4: 3rem;  --e5: 5rem;  --e6: 7rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--carvao);
+  color: var(--creme);
+  font-family: var(--corpo);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.08; margin: 0; }
+
+p { margin: 0 0 var(--e2); max-width: var(--medida); }
+a { color: inherit; }
+
+:focus-visible { outline: 3px solid var(--ambar); outline-offset: 3px; }
+
+.pular {
+  position: absolute; left: -9999px;
+  background: var(--ambar); color: var(--carvao);
+  padding: var(--e2) var(--e3); z-index: 100; text-decoration: none; font-weight: 600;
+}
+.pular:focus { left: 0; top: 0; }
+
+.envelope { width: min(100% - 2.5rem, 1080px); margin-inline: auto; }
+.envelope--estreito { width: min(100% - 2.5rem, 680px); }
+
+/* ---------- Cabeçalho ---------- */
+
+.cabecalho {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(20, 16, 14, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(224, 164, 88, .18);
+}
+.cabecalho__interno {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--e2); min-height: 70px;
+}
+
+.marca {
+  font-family: var(--display); font-size: 1.7rem; font-style: italic;
+  color: var(--ambar); text-decoration: none;
+}
+
+.menu-botao {
+  background: none; border: 1px solid rgba(224,164,88,.4);
+  color: var(--creme); font-family: var(--corpo); font-size: .95rem;
+  padding: .5rem 1rem; cursor: pointer;
+}
+
+.menu {
+  display: none; flex-direction: column; gap: var(--e2);
+  position: absolute; left: 0; right: 0; top: 100%;
+  background: var(--carvao-alt); padding: var(--e3) 1.25rem var(--e4);
+  border-bottom: 1px solid rgba(224,164,88,.18);
+}
+.menu.esta-aberto { display: flex; }
+.menu a { text-decoration: none; }
+.menu a:hover { color: var(--ambar); }
+
+/* ---------- Botões ---------- */
+
+.botao {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--corpo); font-weight: 600; font-size: 1rem;
+  padding: .9rem 1.6rem; text-decoration: none; border: 0; cursor: pointer;
+  transition: background-color .18s ease;
+}
+.botao--ambar { background: var(--ambar); color: var(--carvao); }
+.botao--ambar:hover { background: var(--ambar-forte); }
+.botao--compacto { padding: .6rem 1.1rem; font-size: .93rem; }
+
+/* ---------- Hero ---------- */
+
+.hero { position: relative; padding: var(--e5) 0 var(--e4); overflow: hidden; }
+
+.hero__trigo {
+  position: absolute; right: -10px; top: 0; height: 100%; width: auto;
+  opacity: .55; pointer-events: none;
+}
+
+.hero__interno { position: relative; z-index: 1; }
+
+.hero__titulo {
+  font-size: clamp(2.9rem, 12vw, 6.6rem);
+  line-height: .96;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--e3);
+}
+.hero__titulo em { color: var(--ambar); font-style: italic; }
+
+.hero__texto { color: var(--creme-suave); font-size: 1.06rem; }
+
+/* ---------- Chamadas ---------- */
+
+.chamadas { padding-bottom: var(--e5); }
+.chamadas__grade { display: grid; gap: 3px; }
+
+.chamada {
+  display: block; text-decoration: none;
+  background: var(--carvao-alt);
+  padding: var(--e3);
+  border: 1px solid rgba(224,164,88,.16);
+  transition: background-color .18s ease;
+}
+.chamada:hover { background: #241d19; }
+.chamada h2 { font-size: 1.9rem; margin-bottom: var(--e1); }
+.chamada p { color: var(--creme-suave); margin: 0; font-size: .98rem; }
+
+.chamada--destaque { border-color: var(--ambar); }
+.chamada--destaque h2 { color: var(--ambar); }
+
+/* ---------- Seções ---------- */
+
+.secao__titulo { font-size: clamp(2rem, 6vw, 3.2rem); margin-bottom: var(--e2); }
+.secao__intro { color: var(--creme-suave); margin-bottom: var(--e3); }
+
+.cardapio, .casa, .avaliacoes, .delivery, .onde { padding: var(--e5) 0; }
+.casa { background: var(--carvao-alt); }
+.delivery { background: var(--carvao-alt); }
+
+/* ---------- Cardápio: a peça central ---------- */
+
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: var(--e4); }
+
+.filtro {
+  font-family: var(--corpo); font-size: .93rem; font-weight: 500;
+  background: none; color: var(--creme-suave);
+  border: 1px solid rgba(242,233,222,.24);
+  padding: .5rem 1.05rem; cursor: pointer;
+  transition: color .16s ease, border-color .16s ease, background-color .16s ease;
+}
+.filtro:hover { color: var(--creme); border-color: rgba(242,233,222,.5); }
+.filtro[aria-pressed="true"] { background: var(--ambar); color: var(--carvao); border-color: var(--ambar); }
+
+.categoria { margin-bottom: var(--e5); }
+.categoria[hidden] { display: none; }
+
+.categoria__nome {
+  font-size: 1.5rem; font-style: italic; color: var(--ambar);
+  margin-bottom: var(--e3);
+}
+
+.pratos { list-style: none; margin: 0; padding: 0; }
+
+.prato {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: .6rem;
+  padding: var(--e2) 0;
+  border-bottom: 1px solid rgba(242,233,222,.1);
+}
+
+.prato__nome { font-family: var(--display); font-size: 1.22rem; }
+.prato__linha { border-bottom: 1px dotted rgba(242,233,222,.38); transform: translateY(-.28em); }
+.prato__preco { font-family: var(--display); font-size: 1.22rem; color: var(--ambar); white-space: nowrap; }
+.prato__descricao {
+  grid-column: 1 / -1;
+  color: var(--creme-fraco); font-size: .95rem; line-height: 1.55;
+  max-width: 62ch;
+}
+
+/* ---------- Avaliações ---------- */
+
+.avaliacoes__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--e3); }
+
+.avaliacao { border-left: 2px solid var(--ambar); padding-left: var(--e3); }
+.avaliacao__nota { color: var(--ambar); letter-spacing: .12em; margin-bottom: var(--e1); font-size: 1rem; }
+.avaliacao blockquote { margin: 0 0 var(--e2); }
+.avaliacao blockquote p { font-family: var(--display); font-size: 1.14rem; line-height: 1.5; margin: 0; }
+.avaliacao__autor { color: var(--creme-fraco); font-size: .92rem; margin: 0; }
+
+/* ---------- Delivery ---------- */
+
+.passos { list-style: none; counter-reset: passo; margin: 0; padding: 0; display: grid; gap: var(--e3); }
+.passo { counter-increment: passo; padding-left: 3.2rem; position: relative; }
+.passo::before {
+  content: counter(passo);
+  position: absolute; left: 0; top: -.1rem;
+  font-family: var(--display); font-size: 2.2rem; color: var(--ambar); line-height: 1;
+}
+.passo h3 { font-size: 1.25rem; margin-bottom: var(--e1); }
+.passo p { color: var(--creme-suave); margin: 0; font-size: .97rem; }
+
+/* ---------- Onde ---------- */
+
+.onde__grade { display: grid; gap: var(--e4); }
+.onde p { color: var(--creme-suave); }
+
+.horarios h3 { font-size: 1.35rem; margin-bottom: var(--e2); }
+.horario {
+  display: flex; justify-content: space-between; gap: var(--e2);
+  padding: .55rem 0; margin: 0; max-width: 380px;
+  border-bottom: 1px solid rgba(242,233,222,.1);
+}
+.horario span:last-child { color: var(--creme); text-align: right; }
+
+/* ---------- Rodapé ---------- */
+
+.rodape { border-top: 1px solid rgba(224,164,88,.2); padding: var(--e4) 0 var(--e3); }
+.marca--rodape { display: block; margin-bottom: var(--e2); }
+.selo { color: var(--creme-fraco); font-size: .88rem; margin: 0; max-width: none; }
+
+/* ---------- Responsivo ---------- */
+
+@media (min-width: 720px) {
+  .chamadas__grade { grid-template-columns: repeat(2, 1fr); }
+  .chamada { padding: var(--e4); }
+  .avaliacoes__lista { grid-template-columns: repeat(3, 1fr); }
+  .passos { grid-template-columns: repeat(3, 1fr); }
+  .onde__grade { grid-template-columns: 1fr 1fr; }
+  .prato__descricao { grid-column: 1 / 2; }
+}
+
+@media (min-width: 1000px) {
+  .menu-botao { display: none; }
+  .menu {
+    display: flex; flex-direction: row; align-items: center; gap: var(--e3);
+    position: static; background: none; padding: 0; border: 0;
+  }
+  .hero { padding: var(--e6) 0 var(--e5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

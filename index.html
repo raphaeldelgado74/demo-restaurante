@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cantina Zafferano — massa fresca feita todo dia desde 1998. Salão em Vila Nova e delivery próprio, com entrega em até 40 minutos.">
+<title>Cantina Zafferano — Massa fresca desde 1998</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="cabecalho" id="topo">
+  <div class="envelope cabecalho__interno">
+    <a class="marca" href="#topo">Zafferano</a>
+
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#casa">A casa</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#onde">Onde estamos</a>
+      <a class="botao botao--ambar botao--compacto" href="#delivery">Pedir delivery</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero" aria-labelledby="hero-titulo">
+    <svg class="hero__trigo" viewBox="0 0 120 400" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="#E0A458" stroke-width="1.6" opacity=".38">
+        <path d="M60 380V60"/>
+        <path d="M60 92c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
+        <path d="M60 92c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
+        <path d="M60 140c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
+        <path d="M60 140c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
+        <path d="M60 188c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
+        <path d="M60 188c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
+      </g>
+    </svg>
+
+    <div class="envelope hero__interno">
+      <h1 class="hero__titulo">Massa fresca<br><em>todo dia.</em><br>Desde 1998.</h1>
+      <p class="hero__texto">Rua Pedroso Alvarenga, 88 — Vila Nova<br>Terça a domingo, do meio-dia às 23h</p>
+    </div>
+  </section>
+
+  <section class="chamadas" aria-label="O que você quer fazer">
+    <div class="envelope chamadas__grade">
+      <a class="chamada" href="#onde">
+        <h2>Reservar mesa</h2>
+        <p>Salão de 60 lugares e mezanino para grupos. Reserva por telefone, sem taxa.</p>
+      </a>
+      <a class="chamada chamada--destaque" href="#delivery">
+        <h2>Pedir para entrega</h2>
+        <p>Entrega própria em até 40 minutos, num raio de 6 km. A massa sai da panela para a embalagem térmica.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
+    <div class="envelope">
+      <h2 class="secao__titulo" id="cardapio-titulo">Cardápio</h2>
+      <p class="secao__intro">A massa é feita de manhã, todos os dias, com ovo caipira e semolina. O que sobra não volta amanhã.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar categorias do cardápio">
+        <button class="filtro" type="button" data-categoria="todas" aria-pressed="true">Tudo</button>
+        <button class="filtro" type="button" data-categoria="entradas" aria-pressed="false">Entradas</button>
+        <button class="filtro" type="button" data-categoria="massas" aria-pressed="false">Massas</button>
+        <button class="filtro" type="button" data-categoria="principais" aria-pressed="false">Principais</button>
+        <button class="filtro" type="button" data-categoria="sobremesas" aria-pressed="false">Sobremesas</button>
+      </div>
+
+      <div class="categoria" data-categoria="entradas">
+        <h3 class="categoria__nome">Entradas</h3>
+        <ul class="pratos">
+          <li class="prato"><span class="prato__nome">Bruschetta al pomodoro</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 28</span><span class="prato__descricao">Tomate italiano, alho, manjericão e azeite sobre pão de fermentação natural.</span></li>
+          <li class="prato"><span class="prato__nome">Arancini de ragù</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 36</span><span class="prato__descricao">Quatro bolinhos de risoto recheados com ragù de carne e muçarela.</span></li>
+          <li class="prato"><span class="prato__nome">Polpette da nonna</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 39</span><span class="prato__descricao">Almôndegas cozidas lentamente no molho de tomate, com pão para acompanhar.</span></li>
+          <li class="prato"><span class="prato__nome">Burrata com tomate confitado</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 46</span><span class="prato__descricao">Burrata inteira, tomate assado devagar, azeite e folhas de manjericão.</span></li>
+        </ul>
+      </div>
+
+      <div class="categoria" data-categoria="massas">
+        <h3 class="categoria__nome">Massas</h3>
+        <ul class="pratos">
+          <li class="prato"><span class="prato__nome">Cacio e pepe</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 52</span><span class="prato__descricao">Espaguete, pecorino romano e pimenta-do-reino moída na hora. Três ingredientes, nenhum lugar para esconder erro.</span></li>
+          <li class="prato"><span class="prato__nome">Tagliatelle al ragù</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 64</span><span class="prato__descricao">Ragù de carne cozido por seis horas, servido sobre tagliatelle fresca.</span></li>
+          <li class="prato"><span class="prato__nome">Ravioli de abóbora e sálvia</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 68</span><span class="prato__descricao">Recheio de abóbora cabotiá com amaretto, manteiga de sálvia e amêndoas.</span></li>
+          <li class="prato"><span class="prato__nome">Lasagna alla bolognese</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 78</span><span class="prato__descricao">Nove camadas, béchamel e ragù. Assada por porção, sai do forno para a mesa.</span></li>
+        </ul>
+      </div>
+
+      <div class="categoria" data-categoria="principais">
+        <h3 class="categoria__nome">Principais</h3>
+        <ul class="pratos">
+          <li class="prato"><span class="prato__nome">Frango alla parmigiana</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 68</span><span class="prato__descricao">Filé empanado, molho de tomate e muçarela gratinada, com espaguete ao alho e óleo.</span></li>
+          <li class="prato"><span class="prato__nome">Saltimbocca alla romana</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 88</span><span class="prato__descricao">Escalopes de vitela com presunto cru e sálvia, ao vinho branco e manteiga.</span></li>
+          <li class="prato"><span class="prato__nome">Osso buco com risoto milanês</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 96</span><span class="prato__descricao">Ossobuco braseado por quatro horas, risoto de açafrão e gremolata.</span></li>
+          <li class="prato"><span class="prato__nome">Costela suína ao vinho tinto</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 112</span><span class="prato__descricao">Costela desossada, redução de vinho e polenta cremosa. Serve duas pessoas.</span></li>
+        </ul>
+      </div>
+
+      <div class="categoria" data-categoria="sobremesas">
+        <h3 class="categoria__nome">Sobremesas</h3>
+        <ul class="pratos">
+          <li class="prato"><span class="prato__nome">Cannoli siciliano</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 24</span><span class="prato__descricao">Massa frita na hora, recheio de ricota com raspas de laranja e pistache.</span></li>
+          <li class="prato"><span class="prato__nome">Panna cotta de frutas vermelhas</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 28</span><span class="prato__descricao">Creme de baunilha com calda de amora e framboesa.</span></li>
+          <li class="prato"><span class="prato__nome">Tiramisù da casa</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 32</span><span class="prato__descricao">Mascarpone, café coado forte e cacau. A receita não mudou desde 1998.</span></li>
+          <li class="prato"><span class="prato__nome">Torta caprese com sorvete</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 38</span><span class="prato__descricao">Bolo de chocolate e amêndoas sem farinha, servido morno com sorvete de creme.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="casa" id="casa" aria-labelledby="casa-titulo">
+    <div class="envelope envelope--estreito">
+      <h2 class="secao__titulo" id="casa-titulo">A casa</h2>
+      <p>A Zafferano abriu em 1998, numa sala de dezoito lugares, com Zaira Bonetti fazendo a massa de manhã e servindo à noite. Os filhos entraram no negócio em 2006 e o salão cresceu, mas a rotina não mudou: a massa continua sendo feita de manhã, no mesmo balcão, e o molho de tomate leva as mesmas quatro horas.</p>
+      <p>Não temos cardápio de estação nem prato do dia. Temos vinte pratos que sabemos fazer bem há mais de vinte anos.</p>
+    </div>
+  </section>
+
+  <section class="avaliacoes" aria-labelledby="avaliacoes-titulo">
+    <div class="envelope">
+      <h2 class="secao__titulo" id="avaliacoes-titulo">Quem já sentou aqui</h2>
+      <ul class="avaliacoes__lista">
+        <li class="avaliacao">
+          <p class="avaliacao__nota" aria-label="Cinco de cinco">★★★★★</p>
+          <blockquote><p>Pedi o ragù pelo delivery achando que ia chegar frio. Chegou quente e a massa não tinha empapado. Não sei como fizeram isso.</p></blockquote>
+          <p class="avaliacao__autor">Débora M.</p>
+        </li>
+        <li class="avaliacao">
+          <p class="avaliacao__nota" aria-label="Cinco de cinco">★★★★★</p>
+          <blockquote><p>Levo minha mãe todo mês há uns seis anos. O garçom já sabe que ela vai pedir o ravioli e reclamar que está caro. Ela sempre volta.</p></blockquote>
+          <p class="avaliacao__autor">Henrique P.</p>
+        </li>
+        <li class="avaliacao">
+          <p class="avaliacao__nota" aria-label="Quatro de cinco">★★★★☆</p>
+          <blockquote><p>Cacio e pepe honesto, do jeito que tem que ser. Tirei uma estrela porque esperei quarenta minutos por mesa num sábado. Vá cedo.</p></blockquote>
+          <p class="avaliacao__autor">Letícia F.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="delivery" id="delivery" aria-labelledby="delivery-titulo">
+    <div class="envelope">
+      <h2 class="secao__titulo" id="delivery-titulo">Delivery próprio</h2>
+      <p class="secao__intro">Sem aplicativo intermediário. Quem entrega trabalha aqui.</p>
+
+      <ol class="passos">
+        <li class="passo">
+          <h3>Ligue ou mande mensagem</h3>
+          <p>Pedidos pelo telefone (11) 3477-2100, das 12h às 22h30. Também atendemos por mensagem no mesmo número.</p>
+        </li>
+        <li class="passo">
+          <h3>Confirmamos o tempo na hora</h3>
+          <p>Dizemos o tempo real de preparo antes de você fechar o pedido. Em noites cheias pode passar de 40 minutos, e avisamos.</p>
+        </li>
+        <li class="passo">
+          <h3>Sai da panela para a embalagem térmica</h3>
+          <p>Massa e molho vão em recipientes separados quando o prato pede. Entregamos num raio de 6 km, com taxa de R$ 9.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="onde-titulo">
+    <div class="envelope onde__grade">
+      <div>
+        <h2 class="secao__titulo" id="onde-titulo">Onde estamos</h2>
+        <p>Rua Pedroso Alvarenga, 88<br>Vila Nova — São Paulo</p>
+        <p>(11) 3477-2100</p>
+      </div>
+      <div class="horarios">
+        <h3>Horário</h3>
+        <p class="horario"><span>Terça a quinta</span><span>12h às 15h e 19h às 23h</span></p>
+        <p class="horario"><span>Sexta e sábado</span><span>12h às 24h</span></p>
+        <p class="horario"><span>Domingo</span><span>12h às 22h</span></p>
+        <p class="horario"><span>Segunda</span><span>Fechado</span></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="envelope">
+    <p class="marca marca--rodape">Zafferano</p>
+    <p class="selo">Peça demonstrativa — negócio fictício, criada por Raphael Delgado</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
