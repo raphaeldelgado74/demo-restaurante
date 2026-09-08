@@ -251,3 +251,36 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* ---------- v2: fecha o vão, corrige a descrição e adiciona seções ---------- */
+
+/* O vão entre as chamadas e o cardápio era de ~160px somados. */
+.chamadas { padding-bottom: var(--e3); }
+.cardapio { padding-top: var(--e4); }
+
+/* A descrição do prato ficava presa na primeira coluna e sobrava espaço morto. */
+@media (min-width: 720px) {
+  .prato__descricao { grid-column: 1 / 3; max-width: 70ch; }
+}
+
+/* A massa, toda manhã */
+.massa { padding: var(--e5) 0; background: var(--carvao-alt); }
+.etapas-massa { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--e3); }
+.etapas-massa li { border-top: 1px solid rgba(224,164,88,.34); padding-top: var(--e2); }
+.etapa-hora {
+  font-family: var(--display); font-style: italic; font-size: 1.6rem;
+  color: var(--ambar); margin: 0 0 .2rem;
+}
+.etapas-massa h3 { font-size: 1.2rem; margin-bottom: .35rem; }
+.etapas-massa li p:last-child { color: var(--creme-suave); font-size: .95rem; margin: 0; }
+
+/* Para beber */
+.vinhos { padding: var(--e5) 0; }
+.vinhos__grade { display: grid; gap: var(--e4); }
+.vinhos .categoria { margin-bottom: 0; }
+.vinhos .prato { grid-template-columns: auto 1fr auto; }
+
+@media (min-width: 720px) {
+  .etapas-massa { grid-template-columns: repeat(4, 1fr); }
+  .vinhos__grade { grid-template-columns: repeat(2, 1fr); gap: var(--e5); }
+}

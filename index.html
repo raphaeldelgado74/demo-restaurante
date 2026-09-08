@@ -22,6 +22,7 @@
 
     <nav class="menu" id="menu" aria-label="Navegação principal">
       <a href="#cardapio">Cardápio</a>
+      <a href="#massa">A massa</a>
       <a href="#casa">A casa</a>
       <a href="#delivery">Delivery</a>
       <a href="#onde">Onde estamos</a>
@@ -33,15 +34,18 @@
 <main id="conteudo">
 
   <section class="hero" aria-labelledby="hero-titulo">
-    <svg class="hero__trigo" viewBox="0 0 120 400" aria-hidden="true" focusable="false">
-      <g fill="none" stroke="#E0A458" stroke-width="1.6" opacity=".38">
-        <path d="M60 380V60"/>
-        <path d="M60 92c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
-        <path d="M60 92c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
-        <path d="M60 140c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
-        <path d="M60 140c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
-        <path d="M60 188c0-16 12-26 24-28 2 16-8 28-24 28Z"/>
-        <path d="M60 188c0-16-12-26-24-28-2 16 8 28 24 28Z"/>
+    <svg class="hero__trigo" viewBox="0 0 200 460" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="#E0A458" stroke-width="3.2" stroke-linecap="round" opacity=".72">
+        <path d="M100 448V70"/>
+        <path d="M100 108c0-22 17-36 34-39 3 22-11 39-34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 108c0-22-17-36-34-39-3 22 11 39 34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 168c0-22 17-36 34-39 3 22-11 39-34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 168c0-22-17-36-34-39-3 22 11 39 34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 228c0-22 17-36 34-39 3 22-11 39-34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 228c0-22-17-36-34-39-3 22 11 39 34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 288c0-22 17-36 34-39 3 22-11 39-34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 288c0-22-17-36-34-39-3 22 11 39 34 39Z" fill="#E0A458" fill-opacity=".16"/>
+        <path d="M100 70c-6-12-2-24 0-30 2 6 6 18 0 30Z" fill="#E0A458" fill-opacity=".3"/>
       </g>
     </svg>
 
@@ -115,6 +119,46 @@
           <li class="prato"><span class="prato__nome">Tiramisù da casa</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 32</span><span class="prato__descricao">Mascarpone, café coado forte e cacau. A receita não mudou desde 1998.</span></li>
           <li class="prato"><span class="prato__nome">Torta caprese com sorvete</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 38</span><span class="prato__descricao">Bolo de chocolate e amêndoas sem farinha, servido morno com sorvete de creme.</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="massa" id="massa" aria-labelledby="massa-titulo">
+    <div class="envelope">
+      <h2 class="secao__titulo" id="massa-titulo">A massa, toda manhã</h2>
+      <p class="secao__intro">Não é discurso de cardápio. É a rotina que define o que dá para servir à noite.</p>
+      <ol class="etapas-massa">
+        <li><p class="etapa-hora">6h</p><h3>Ovo e semolina</h3><p>Ovo caipira e semolina de grano duro, pesados na balança, sem pré-mistura.</p></li>
+        <li><p class="etapa-hora">7h</p><h3>Descanso</h3><p>A massa descansa coberta por uma hora. É o que dá elasticidade e evita que quebre no corte.</p></li>
+        <li><p class="etapa-hora">9h</p><h3>Corte</h3><p>Tagliatelle, ravioli e lasanha cortados à mão, um formato por dia da semana.</p></li>
+        <li><p class="etapa-hora">23h</p><h3>O que sobrou</h3><p>Vai embora. Massa fresca de véspera não é massa fresca, e não servimos.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="vinhos" id="vinhos" aria-labelledby="vinhos-titulo">
+    <div class="envelope">
+      <h2 class="secao__titulo" id="vinhos-titulo">Para beber</h2>
+      <div class="vinhos__grade">
+        <div class="categoria">
+          <h3 class="categoria__nome">Vinhos em taça</h3>
+          <ul class="pratos">
+            <li class="prato"><span class="prato__nome">Chianti Classico</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 34</span></li>
+            <li class="prato"><span class="prato__nome">Montepulciano d'Abruzzo</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 29</span></li>
+            <li class="prato"><span class="prato__nome">Pinot Grigio</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 31</span></li>
+            <li class="prato"><span class="prato__nome">Prosecco</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 36</span></li>
+          </ul>
+        </div>
+        <div class="categoria">
+          <h3 class="categoria__nome">Sem álcool</h3>
+          <ul class="pratos">
+            <li class="prato"><span class="prato__nome">Limonata siciliana</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 18</span></li>
+            <li class="prato"><span class="prato__nome">Chinotto</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 16</span></li>
+            <li class="prato"><span class="prato__nome">Café espresso</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 9</span></li>
+            <li class="prato"><span class="prato__nome">Água com gás, 500 ml</span><span class="prato__linha" aria-hidden="true"></span><span class="prato__preco">R$ 12</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
