@@ -284,3 +284,6 @@ a { color: inherit; }
   .etapas-massa { grid-template-columns: repeat(4, 1fr); }
   .vinhos__grade { grid-template-columns: repeat(2, 1fr); gap: var(--e5); }
 }
+
+/* ---------- Correções do audit impeccable ---------- */
+.botao--ambar:hover { color: var(--carvao); }
